@@ -31,7 +31,7 @@ public class Thumbnail {
 		String srcImage="resources/1.jpg";
 		String desImage="resources/2.jpg";
 		
-		thumbnail.createThumbnail(srcImage, 500, 400, 90, desImage);
+		thumbnail.createThumbnail(srcImage, 100, 80, 90, desImage);
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class Thumbnail {
 		BufferedImage thumbImage=new BufferedImage(thumbWidth, thumbHeight, BufferedImage.TYPE_INT_RGB);
 		Graphics2D graphics2d=thumbImage.createGraphics();
 		graphics2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-		graphics2d.drawImage(image, 0, 0, null);
+		graphics2d.drawImage(image, 0, 0, thumbWidth,thumbHeight,null);
 		
 		BufferedOutputStream out=new BufferedOutputStream(new FileOutputStream(desImage));
 		JPEGImageEncoder encoder=JPEGCodec.createJPEGEncoder(out);
