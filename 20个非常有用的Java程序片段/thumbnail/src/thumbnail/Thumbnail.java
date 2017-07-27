@@ -82,6 +82,7 @@ public class Thumbnail {
 		encoder.setJPEGEncodeParam(param);
 		encoder.encode(thumbImage);
 		out.close();
+		
 	}
 
 }
