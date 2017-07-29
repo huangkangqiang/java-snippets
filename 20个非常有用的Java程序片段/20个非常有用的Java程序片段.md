@@ -19,3 +19,5 @@
 ## [创建图片的缩略图](./thumbnail/创建图片的缩略图.md)
 
 ## [创建JSON格式的数据](./json/创建JSON格式的数据.md)
+
+## [把Array转换成Map](./array-convert-map/把Array转换成Map.md)
