@@ -27,3 +27,5 @@
 ## [抓屏程序](./capture-screen/抓屏程序.md)
 
 ## [使用iText JAR生成PDF](./create-pdf/使用iText JAR生成PDF.md)
+
+## [改变数组的大小](./change-size-of-array/改变数组的大小.md)
