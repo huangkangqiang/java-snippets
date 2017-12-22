@@ -35,6 +35,7 @@ public class MyValidationFilter extends Cas20ProxyReceivingTicketValidationFilte
 		while(enums.hasMoreElements()){
 			System.out.println(session.getAttribute(enums.nextElement()));
 		}
+		session.setAttribute("username", name);
 		System.out.println("========================================");
 		System.out.println(session.getAttribute("_const_cas_assertion_").toString());
 		super.onSuccessfulValidation(request, response, assertion);

@@ -27,23 +27,26 @@
 <body>
 	你已经登录进来了兄弟，下面是你的登录信息：
 	<%
-	AttributePrincipal principal = (AttributePrincipal) request.getUserPrincipal();
-
-	Map<String, Object> attributes = principal.getAttributes();
-	String userId = "";
+	/* AttributePrincipal principal = (AttributePrincipal) request.getUserPrincipal();
+	
+	Map<String, Object> attributes = principal.getAttributes(); */
+	/* String userId = "";
 	String userClass = "";
-	if (attributes != null && attributes.size() > 0) {
-		/* userId = attributes.get("UserId").toString();
-		userClass = attributes.get("UserClass").toString(); */
-		userId = attributes.toString();
-	}
+	if (attributes != null && attributes.size() > 0) { */
+	/* userId = attributes.get("UserId").toString();
+	userClass = attributes.get("UserClass").toString(); */
+	/* 	userId = attributes.toString();
+	} */
+	String name = (String) request.getAttribute("username");
 %>
-	<p><%=userId%></p>
-	<p><%=userClass%></p>
+	<%=name%>
+	<%-- <p><%=userId%></p>
+	<p><%=userClass%></p> --%>
 	<%
 		if (session != null) {
 	%>
 	<p><%=session.getId()%></p>
+	<p><%=session.getAttribute("username")%></p>
 	<%
 		}
 	%>
